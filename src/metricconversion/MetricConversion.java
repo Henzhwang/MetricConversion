@@ -28,6 +28,7 @@ public class MetricConversion {
     {
         double cent;
         cent = inches * 2.54;
+        System.out.println("\n" + inches + " inches equals " + Math.round(cent) + " centimeters.");
         return cent;
     }
     
@@ -39,6 +40,7 @@ public class MetricConversion {
     public static double feetToCentimeters(double feet)
     {
         double cent = feet * 30;
+        System.out.println("\n" + feet + " feets equals " + Math.round(cent) + " centimeters.");
         return cent;
     }
     
@@ -50,6 +52,7 @@ public class MetricConversion {
     public static double yardsToMeters(double yard)
     {
         double meter = yard * 0.91;
+        System.out.println("\n" + yard + " yards equals " + Math.round(meter) + " meters.");
         return meter;
     }
     
@@ -61,6 +64,7 @@ public class MetricConversion {
     public static double milesToKilometers(double miles)
     {
         double kilo = miles * 1.6;
+        System.out.println("\n" + miles + " miles equals " + Math.round(kilo) + " kilometers.");
         return kilo;
     }
     
@@ -72,6 +76,7 @@ public class MetricConversion {
     public static double centimetersToInches(double cent)
     {
         double inches = cent / 2.54;
+        System.out.println("\n" + cent + " centimeters equals " + Math.round(cent) + " inches.");
         return inches;
     }
     
@@ -83,6 +88,7 @@ public class MetricConversion {
     public static double centimetersToFeet(double cent)
     {
         double feet = cent / 30;
+        System.out.println("\n" + cent + " centimeters equals " + Math.round(feet) + " feets.");
         return feet;
     }
     
@@ -94,6 +100,7 @@ public class MetricConversion {
     public static double metersToYards(double meter)
     {
         double yard = meter / 0.91;
+        System.out.println("\n" + meter + " meters equals " + Math.round(yard) + " yards.");
         return yard; 
     }
     
@@ -105,6 +112,7 @@ public class MetricConversion {
     public static double kilometersToMiles(double kilo)
     {
         double mile = kilo / 1.6;
+        System.out.println("\n" + kilo + " kilometers equals " + Math.round(mile) + " miles.");
         return kilo;
     }
     
@@ -126,63 +134,41 @@ public class MetricConversion {
         System.out.println("Enter Your Choice:");
         //Declare variable and read user input
         int cho = input.nextInt();
-        
-        //Declare variables for further use in determine method to use
-        String fir = null, sec = null;
-        double fin = 0;
-        
+       
         //read user input to determine which conversiio method should be used
         if (cho == 1)
         {
-            fin = inchesToCentimeters(num);
-            fir = "inches";
-            sec = "centimeters";
+            inchesToCentimeters(num);
         }
         else if (cho == 2)
         {
-            fin = feetToCentimeters(num);
-            fir = "feet";
-            sec = "centimeters";
+            feetToCentimeters(num);
         }
         else if (cho == 3)
         {
-            fin = yardsToMeters(num);
-            fir = "yards";
-            sec = "meters";
+            yardsToMeters(num);
         }
         else if (cho == 4)
         {
-            fin = milesToKilometers(num);
-            fir = "miles";
-            sec = "kilometers";
+            milesToKilometers(num);
         }
         else if (cho == 5)
         {
-            fin = centimetersToInches(num);
-            fir = "centimeters";
-            sec = "inches";
+            centimetersToInches(num);
         }
         else if(cho == 6)
         {
-            fin = centimetersToFeet(num);
-            fir = "centimeters";
-            sec = "feet";
+            centimetersToFeet(num);
         }
         else if (cho == 7)
         {
-            fin = metersToYards(num);
-            fir = "meters";
-            sec = "yards";
+            metersToYards(num);
         }
         else if (cho == 8)
         {
-            fin = kilometersToMiles(num);
-            fir = "kilometers";
-            sec = "miles";
+            kilometersToMiles(num);
         }
         
-        //Display the new value to user
-        System.out.println("\n" + num + " " + fir + " equals " + Math.round(fin) + " " + sec);
         //Close the input source
         input.close();
     }
