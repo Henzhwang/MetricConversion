@@ -26,9 +26,8 @@ public class MetricConversion {
      */
     public static double inchesToCentimeters(double inches)
     {
-        double cent;
-        cent = inches * 2.54;
-        System.out.println("\n" + inches + " inches equals " + Math.round(cent) + " centimeters.");
+        double cent = inches * 2.54;
+        System.out.println("\n" + inches + " inches equals " + Math.round(cent*100)/100D + " centimeters.");
         return cent;
     }
     
@@ -40,7 +39,7 @@ public class MetricConversion {
     public static double feetToCentimeters(double feet)
     {
         double cent = feet * 30;
-        System.out.println("\n" + feet + " feets equals " + Math.round(cent) + " centimeters.");
+        System.out.println("\n" + feet + " feet equals " + Math.round(cent*100)/100d + " centimeters.");
         return cent;
     }
     
@@ -52,7 +51,7 @@ public class MetricConversion {
     public static double yardsToMeters(double yard)
     {
         double meter = yard * 0.91;
-        System.out.println("\n" + yard + " yards equals " + Math.round(meter) + " meters.");
+        System.out.println("\n" + yard + " yards equals " + Math.round(meter*100)/100D + " meters.");
         return meter;
     }
     
@@ -64,7 +63,7 @@ public class MetricConversion {
     public static double milesToKilometers(double miles)
     {
         double kilo = miles * 1.6;
-        System.out.println("\n" + miles + " miles equals " + Math.round(kilo) + " kilometers.");
+        System.out.println("\n" + miles + " miles equals " + Math.round(kilo*100)/100D + " kilometers.");
         return kilo;
     }
     
@@ -76,7 +75,7 @@ public class MetricConversion {
     public static double centimetersToInches(double cent)
     {
         double inches = cent / 2.54;
-        System.out.println("\n" + cent + " centimeters equals " + Math.round(cent) + " inches.");
+        System.out.println("\n" + cent + " centimeters equals " + Math.round(cent*100)/100D + " inches.");
         return inches;
     }
     
@@ -88,7 +87,7 @@ public class MetricConversion {
     public static double centimetersToFeet(double cent)
     {
         double feet = cent / 30;
-        System.out.println("\n" + cent + " centimeters equals " + Math.round(feet) + " feets.");
+        System.out.println("\n" + cent + " centimeters equals " + Math.round(feet*100)/100D + " feet.");
         return feet;
     }
     
@@ -100,7 +99,7 @@ public class MetricConversion {
     public static double metersToYards(double meter)
     {
         double yard = meter / 0.91;
-        System.out.println("\n" + meter + " meters equals " + Math.round(yard) + " yards.");
+        System.out.println("\n" + meter + " meters equals " + Math.round(yard*100)/100D + " yards.");
         return yard; 
     }
     
@@ -112,7 +111,7 @@ public class MetricConversion {
     public static double kilometersToMiles(double kilo)
     {
         double mile = kilo / 1.6;
-        System.out.println("\n" + kilo + " kilometers equals " + Math.round(mile) + " miles.");
+        System.out.println("\n" + kilo + " kilometers equals " + Math.round(mile*100)/100D + " miles.");
         return kilo;
     }
     
@@ -121,7 +120,7 @@ public class MetricConversion {
         Scanner input = new Scanner(System.in);
         
         //Ask user for input
-        System.out.println("Enter a number: ");
+        System.out.println("Enter The Value of Length: ");
         //Declare variable and read user input
         double num = input.nextInt();
         
@@ -167,6 +166,10 @@ public class MetricConversion {
         else if (cho == 8)
         {
             kilometersToMiles(num);
+        }
+        else
+        {
+            System.out.println("Please Enter an Valid Number!");
         }
         
         //Close the input source
